@@ -1,0 +1,65 @@
+/* ---------- Base Mobile View ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+/* Box styling */
+.box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.red { background-color: #e74c3c; }
+.green { background-color: #27ae60; }
+.blue { background-color: #3498db; }
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ---------- Tablet View (≥ 772px) ---------- */
+@media (min-width: 772px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 45vw;
+  }
+
+  .box img {
+    max-height: 30vh;
+    width: auto;
+  }
+}
+
+/* ---------- Large Screen View (≥ 998px) ---------- */
+@media (min-width: 998px) {
+  .box {
+    width: 30vw;
+  }
+}
